@@ -1,0 +1,16 @@
+{
+  "name": "web-sockets",
+  "version": "1.0.0",
+  "description": "Using websockets to create a duplex communication app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "kapeel.kokane@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "http": "0.0.1-security",
+    "websocket": "^1.0.31"
+  }
+}
