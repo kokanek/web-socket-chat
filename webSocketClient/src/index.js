@@ -49,20 +49,20 @@ export default class App extends Component {
   }
   render() {
     return (
-      <div className="main">
+      <div className="main" id='wrapper'>
         {this.state.isLoggedIn ?
         <div>
           <div className="title">
-            <Text type="secondary" style={{ fontSize: '36px' }}>Websocket Chat</Text>
+            <Text id="main-heading" type="secondary" style={{ fontSize: '36px' }}>Websocket Chat: {this.state.userName}</Text>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', paddingBottom: 50 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', paddingBottom: 50 }} id="messages">
             {this.state.messages.map(message => 
               <Card key={message.msg} style={{ width: 300, margin: '16px 4px 0 4px', alignSelf: this.state.userName === message.user ? 'flex-end' : 'flex-start' }} loading={false}>
                 <Meta
                   avatar={
                     <Avatar style={{ color: '#f56a00', backgroundColor: '#fde3cf' }}>{message.user[0].toUpperCase()}</Avatar>
                   }
-                  title={message.user}
+                  title={message.user+":"}
                   description={message.msg}
                 />
               </Card> 
